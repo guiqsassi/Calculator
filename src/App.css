@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;600&display=swap');
+html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+#root{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.container{
   flex-direction: column;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #A0D7FF;
+}
+.ball{
+  position: relative;
+  left: 15%;
+  height: 500px;
+  width: 500px;
+  background-color: #109DFF;
+  border-radius: 100%;
+}
+.calculator{
+  position: absolute;
+  width: 340px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.53);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+}
+.display{
+  flex-wrap: wrap;
+  height: 20%;
+  margin: 5%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.596);
+  text-align: end;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  
+}
+.displayText{
+  overflow-x: hidden;
+  margin-right: 15px;
+  font-family: 'Libre Franklin', sans-serif;
+  color: rgb(124, 124, 124);
 }
 
-.App-link {
-  color: #61dafb;
+.digits{
+  flex-wrap: wrap;
+  margin-top: 10%;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons{
+  background: rgba(255, 255, 255, 0.596);
+  border: 0;
+  border-radius: 20px;
+  flex: 1 0 19%;
+  font-size: larger;
+  color: rgb(39, 39, 39);
+  margin: 3%; 
+  width: 20%;
+  height: 15%;
+  font-family: 'Libre Franklin', sans-serif;
+  cursor: pointer;
+}
+.buttons:hover{
+  background: rgba(255, 255, 255, 0.863);
+  transition: 500ms;
+}
+.waves{
+  position: relative;
+  bottom: 0%;
 }
