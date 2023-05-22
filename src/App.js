@@ -2,9 +2,37 @@ import { useState } from 'react';
 import './App.css'
   
 function App() {
-  let [display, setDisplay] = useState('')
-  let [display2, setDisplay2] = useState('')
-  let [resultado, setResultado] = useState("")
+  let [display, setDisplay] = useState("0")
+
+  function Numbers(e){
+
+
+
+    if(display === "0"){
+      if(e=="."){
+        setDisplay(display + e)
+      }
+      else{
+        setDisplay(e)
+      }
+      
+    }
+    else{
+      setDisplay(display + e)
+    }
+    
+ 
+  }
+
+  function opertator (operation){
+    console.log(display)
+    if(!display == ''){
+    if(display.slice(-1) === "+" || display.slice(-1) === "-" ||display.slice(-1) === "/" || display.slice(-1) === "*"){
+    }
+    else{
+      setDisplay(display += `${operation}`)
+    }} 
+  }
   return (
 
 
@@ -15,37 +43,33 @@ function App() {
    
       <div className='calculator'>
           <div className='display'>
-              <h1 className='displayText'>{resultado} </h1>
               <h1 className='displayText'>{display} </h1>
           </div>
           <div className='digits'>
             
              <div className='Numbers'>
-              <button className='buttons'onClick={() =>{ 
-                  setDisplay(display += "% ")
-             }}> %</button>
-            <button className='buttons'onClick={() =>{ setDisplay("") }}> CE </button>
-               <button className='buttonsEsp'onClick={() =>{ setDisplay(display += " / ") }}> / </button>
-            <button className='buttons' onClick={() =>{ setDisplay(display += "7") }}> 7</button>
-            <button className='buttons' onClick={() =>{ setDisplay(display += "8") }}> 8</button>
-            <button className='buttons' onClick={() =>{ setDisplay(display += "9") }}> 9</button>
-            <button className='buttons'onClick={() =>{ setDisplay(display += "4") }}> 4</button>
-            <button className='buttons'onClick={() =>{ setDisplay(display += "5") }}> 5</button>
-            <button className='buttons'onClick={() =>{ setDisplay(display += "6") }}> 6</button>
-            <button className='buttons' onClick={() =>{ setDisplay(display += "1") }}> 1</button>
-            <button className='buttons' onClick={() =>{ setDisplay(display += "2") }}> 2</button>
-            <button className='buttons' onClick={() =>{ setDisplay(display += "3") }}> 3</button>
-            <button className='buttonsEsp' onClick={() =>{ setDisplay(display += ".") }}> .</button>
-            <button className='button0'onClick={() =>{ setDisplay(display += "0") }}> 0</button>
+              <button className='buttons'onClick={() =>{opertator("%")}}> %</button>
+            <button className='buttons'onClick={() =>{ setDisplay('0')}}> CE </button>
+               <button className='buttonsEsp'onClick={() =>{opertator("/") }}> / </button>
+            <button className='buttons' onClick={() =>{ Numbers('7')}}> 7</button>
+            <button className='buttons' onClick={() =>{ Numbers('8')}}> 8</button>
+            <button className='buttons' onClick={() =>{ Numbers('9')}}> 9</button>
+            <button className='buttons'onClick={() =>{ Numbers('4')}}> 4</button>
+            <button className='buttons'onClick={() =>{ Numbers('5')}}> 5</button>
+            <button className='buttons'onClick={() =>{ Numbers('6') }}> 6</button>
+            <button className='buttons' onClick={() =>{ Numbers('1') }}> 1</button>
+            <button className='buttons' onClick={() =>{ Numbers('2') }}> 2</button>
+            <button className='buttons' onClick={() =>{ Numbers('3') }}> 3</button>
+            <button className='buttonsEsp' onClick={() =>{ Numbers(".")}}> .</button>
+            <button className='button0'onClick={() =>{ Numbers('0') }}> 0</button>
 
              </div>
              <div className='operations'> 
-            <button className='buttonsEspLeft'onClick={() =>{ setDisplay(display += " - ") }}> -</button>
-            <button className='buttonsEspLeft'onClick={() =>{ setDisplay(display += " * ") }}> X</button>
-            <button className='buttonsLeft' onClick={() =>{ setDisplay(display += " + ") }}> +</button>
-            <button className='buttonsLeft' onClick={() =>{ let resultado = (eval(display)) 
-            setDisplay(resultado)
-            }}> =</button>
+            <button className='buttonsEspLeft'onClick={() =>{ opertator("-") }}> -</button>
+            <button className='buttonsEspLeft'onClick={() =>{ opertator("*")}}> X</button>
+            <button className='buttonsLeft' onClick={() =>{  opertator("+") }}> +</button>
+            <button className='buttonsLeft' onClick={() =>{ let resp = eval(display)
+            setDisplay(resp.toString()) }}> =</button>
              </div>
           </div>
           

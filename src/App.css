@@ -150,6 +150,7 @@ body{
   height: 100%;
   display: flex;
   margin-top: 3%;
+  justify-content: center;
   flex-direction: column;
   position: relative;
   right: 22%;
