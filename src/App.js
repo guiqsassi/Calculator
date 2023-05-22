@@ -27,7 +27,7 @@ function App() {
   function opertator (operation){
     console.log(display)
     if(!display == ''){
-    if(display.slice(-1) === "+" || display.slice(-1) === "-" ||display.slice(-1) === "/" || display.slice(-1) === "*"){
+    if(display.slice(-1) === "+" || display.slice(-1) === "-" ||display.slice(-1) === "/" || display.slice(-1) === "*" || display.slice(-1) === "%"){
     }
     else{
       setDisplay(display += `${operation}`)
