@@ -23,7 +23,7 @@ function App() {
     
  
   }
-let git
+
   function opertator (operation){
     console.log(display)
     if(!display == ''){
