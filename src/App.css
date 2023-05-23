@@ -60,12 +60,27 @@ body{
   
 }
 .displayText{
-  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-x: auto;
   margin-right: 15px;
   font-family: 'Libre Franklin', sans-serif;
   color: rgb(124, 124, 124);
 }
 
+::-webkit-scrollbar-track{
+  background: #00010200;
+}
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+  
+}
+::-webkit-scrollbar-thumb{
+  width: 10px;
+  background: #1a9cff25;
+
+  border-radius: 20px;
+}
 .digits{
   flex-wrap: wrap;
   margin-top: 10%;
