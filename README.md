@@ -63,8 +63,9 @@ _Para instalar este projeto você precisa:_
 <!-- CONTACT -->
 ## 💬 Contato
 
-Guilherme Q. Sassi - guiqsassi@gmail.com
-Linkedin - https://www.linkedin.com/in/guiqsassi/
+* Guilherme Q. Sassi - guiqsassi@gmail.com
+  
+* Linkedin - https://www.linkedin.com/in/guiqsassi/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
